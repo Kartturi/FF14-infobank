@@ -1,23 +1,38 @@
-import React, { Component } from 'react';
-import './app.css';
-import ReactImage from './react.png';
+import React, { Component } from "react";
+import axios from "axios";
+import HeaderGroup from "./components/HeaderGroup";
+import ShowContent from "./components/ShowContent";
 
-export default class App extends Component {
-  state = { username: null };
+import { Provider } from "react-redux";
+import store from "./store";
 
-  componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      title: "",
+      isActive: "mounts"
+    };
+
+    this.callServer = this.callServer.bind(this);
+  }
+
+  callServer() {
+    axios.get("/api/mounts").then(res => console.log(res.data));
   }
 
   render() {
-    const { username } = this.state;
     return (
-      <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
-      </div>
+      <Provider store={store}>
+        <div className="container">
+          <HeaderGroup />
+
+          <ShowContent />
+        </div>
+      </Provider>
     );
   }
 }
+
+export default App;

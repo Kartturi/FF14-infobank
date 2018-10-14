@@ -1,8 +1,176 @@
-h1 {
-  color: green;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
-  text-align: center;
-  margin: auto;
+  font-family: "Nunito", sans-serif;
+  color: #6d5d4b;
+  font-weight: 300;
+  line-height: 1.6;
 }
+
+.initial-view {
+  margin-top: 50px;
+}
+
+.btn {
+  border: none;
+  color: white;
+  background-color: rgb(4, 58, 55);
+  padding: 20px;
+  font-size: 18px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgb(42, 168, 74);
+  outline: 0;
+}
+
+.container {
+  max-width: 850px;
+
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.header-group {
+  text-align: center;
+}
+
+.header-group-btns {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+/* Mounts ================================= */
+.mounts {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.mounts-info {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 55%;
+  align-self: flex-start;
+}
+
+.mounts-info h2 {
+  text-align: center;
+}
+
+.mounts-info-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mounts-info-info {
+  padding: 10px;
+}
+
+.mounts-info-bottom {
+  display: flex;
+  justify-content: space-around;
+
+  margin: 10px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.mounts-info-summon {
+  text-align: center;
+  padding: 10px;
+}
+
+.mounts-list {
+  width: 30%;
+}
+
+.mounts-list-ul {
+  height: 800px;
+  overflow: scroll;
+}
+
+.mounts-list-ul-li {
+  display: flex;
+  border-radius: 10px;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.mounts-list-ul-li:hover {
+  background-color: rgb(20, 189, 28) !important;
+  color: white;
+}
+
+.mounts-list-ul-li:active {
+  background-color: rgb(20, 189, 28) !important;
+  color: white;
+}
+
+.mounts-list-ul-li:nth-of-type(odd) {
+  background-color: rgb(183, 210, 245);
+}
+
+.mounts-list-ul-li p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mounts-list-ul-li-icon-container {
+  margin: 10px 10px 0px 10px;
+}
+
+/* Mounts end ================================= */
+
+/* achievement  ================================= */
+
+.achievement {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.achievement-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-category-li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.achievement-category-ul-btn {
+  font-size: 20px;
+  width: 163px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(183, 210, 245);
+  outline: none;
+}
+
+.achievement-category-ul-btn:hover,
+.achievement-category-ul-btn:focus {
+  background-color: rgb(42, 168, 74);
+  color: white;
+}
+
+/* achievement end ================================= */
